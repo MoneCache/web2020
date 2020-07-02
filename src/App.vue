@@ -25,12 +25,12 @@
 </template>
 
 <script>
-import HelloWorld from "./components/HelloWorld.vue";
-import Communicate from "@/components/communicate";
-import SlotTest from "@/components/slots";
-import Recursion from "@/components/recursion";
-import FormTest from '@/components/form'
-import ProvideAndInject from '@/test/01-01/provide_and_inject'
+// import HelloWorld from "./components/HelloWorld.vue";
+// import Communicate from "@/components/communicate";
+// import SlotTest from "@/components/slots";
+// import Recursion from "@/components/recursion";
+// import FormTest from '@/components/form'
+import ProvideAndInject from '@/test/01-01/provideandinject/provide_and_inject'
 
 export default {
   name: "app",

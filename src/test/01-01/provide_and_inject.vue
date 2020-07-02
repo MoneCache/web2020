@@ -42,8 +42,9 @@ export default {
   },
   methods: {
     handleClick () {
-      this.searchModel.foo = '3000'
-      this.searchModel.temp = 'ssss'
+      // this.searchModel.foo = '3000'
+      // this.searchModel.temp = 'ssss'
+      this.message.msg = "99999"
     }
   }
 }

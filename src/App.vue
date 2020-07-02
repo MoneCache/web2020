@@ -1,24 +1,26 @@
 <template>
   <div id="app">
-
     <!-- form测试 -->
-    <form-test></form-test>
+    <!-- <form-test></form-test> -->
 
-    <!-- <img alt="Vue logo" src="./assets/logo.png" />
-    <HelloWorld>      
+    <!-- <HelloWorld>
       <template>abc</template> -->
-      <!-- 作用域插槽：显示数据来自子组件 -->
-      <!-- <template v-slot:content="{foo}">content...{{foo}}</template>
+    <!-- 作用域插槽：显示数据来自子组件 -->
+    <!-- <template v-slot:content="{foo}">content...{{foo}}</template>
     </HelloWorld>
-    <HelloWorld msg="Welcome to Your Vue.js App" 
-      foo="foo" ref="hw" @myclick="onMyClick"/> -->
-    
+    <HelloWorld msg="Welcome to Your Vue.js App"
+                foo="foo"
+                ref="hw"
+                @myclick="onMyClick" /> -->
+
     <!-- 组件通信 -->
     <!-- <Communicate></Communicate> -->
     <!-- 插槽 -->
     <!-- <SlotTest></SlotTest> -->
     <!-- 递归 -->
     <!-- <Recursion></Recursion> -->
+    <provide-and-inject></provide-and-inject>
+
   </div>
 </template>
 
@@ -28,30 +30,32 @@ import Communicate from "@/components/communicate";
 import SlotTest from "@/components/slots";
 import Recursion from "@/components/recursion";
 import FormTest from '@/components/form'
+import ProvideAndInject from '@/test/01-01/provide_and_inject'
 
 export default {
   name: "app",
-  provide(){
+  provide () {
     return {
       foo: 'foo'
     }
   },
   components: {
-    HelloWorld,
-    Communicate,
-    SlotTest,
-    Recursion,
-    FormTest
+    // HelloWorld,
+    // Communicate,
+    // SlotTest,
+    // Recursion,
+    // FormTest
+    ProvideAndInject
   },
-  mounted() {
+  mounted () {
     // this.$refs.hw.xx = 'xxxxxx'
     // 子组件实例的顺序不保证的
     // this.$children[0].xx = 'oo'
   },
   methods: {
-    onMyClick() {
+    onMyClick () {
       console.log('myclick');
-      
+
     }
   },
 };

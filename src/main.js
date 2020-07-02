@@ -2,7 +2,8 @@ import Vue from "vue";
 import App from "./App.vue";
 import emitter from "./mixins/emitter";
 import Bus from './utils/bus';
-import create from './utils/create';
+// import create from './utils/create';
+import create from '@/test/01-01/notice/create';
 
 Vue.config.productionTip = false;
 Vue.mixin(emitter);

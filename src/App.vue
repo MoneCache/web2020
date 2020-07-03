@@ -19,7 +19,7 @@
     <!-- <SlotTest></SlotTest> -->
     <!-- 递归 -->
     <!-- <Recursion></Recursion> -->
-    <!-- <provide-and-inject></provide-and-inject> -->
+    <provide-and-inject></provide-and-inject>
     <form-test></form-test>
 
   </div>
@@ -31,8 +31,8 @@
 // import SlotTest from "@/components/slots";
 // import Recursion from "@/components/recursion";
 // import FormTest from '@/components/form'
-// import ProvideAndInject from '@/test/01-01/provideandinject/provide_and_inject'
-import formTest from '@/test/01-01/form/index'
+import ProvideAndInject from '@/test/01-01/provideandinject/provide_and_inject'
+// import formTest from '@/test/01-01/form/index'
 
 export default {
   name: "app",
@@ -47,8 +47,8 @@ export default {
     // SlotTest,
     // Recursion,
     // FormTest
-    // ProvideAndInject,
-    formTest
+    ProvideAndInject,
+    // formTest
   },
   mounted () {
     // this.$refs.hw.xx = 'xxxxxx'

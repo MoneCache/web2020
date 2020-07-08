@@ -19,9 +19,9 @@
     <!-- <SlotTest></SlotTest> -->
     <!-- 递归 -->
     <!-- <Recursion></Recursion> -->
-    <provide-and-inject></provide-and-inject>
-    <form-test></form-test>
-
+    <!-- <provide-and-inject></provide-and-inject> -->
+    <!-- <form-test></form-test> -->
+    <vmodel-and-async></vmodel-and-async>
   </div>
 </template>
 
@@ -31,8 +31,10 @@
 // import SlotTest from "@/components/slots";
 // import Recursion from "@/components/recursion";
 // import FormTest from '@/components/form'
-import ProvideAndInject from '@/test/01-01/provideandinject/provide_and_inject'
+// import ProvideAndInject from '@/test/01-01/provideandinject/provide_and_inject'
 // import formTest from '@/test/01-01/form/index'
+
+import vmodelAndAsync from '@/test/01-02/vmodelandasync/index'
 
 export default {
   name: "app",
@@ -47,8 +49,9 @@ export default {
     // SlotTest,
     // Recursion,
     // FormTest
-    ProvideAndInject,
+    // ProvideAndInject,
     // formTest
+    vmodelAndAsync
   },
   mounted () {
     // this.$refs.hw.xx = 'xxxxxx'

@@ -32,7 +32,24 @@ export default {
   data () {
     return {
       inputVal: "333",
-      selectItem: ""
+      selectVal: [],
+      selectItem: [
+        {
+          label: "第一",
+          value: 'first',
+          checked: true
+        },
+        {
+          label: "第二",
+          value: 'second',
+          checked: false
+        },
+        {
+          label: "第三",
+          value: 'three',
+          checked: false
+        }
+      ]
     }
   },
   methods: {

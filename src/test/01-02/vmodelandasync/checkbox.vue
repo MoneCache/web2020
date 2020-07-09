@@ -2,48 +2,52 @@
   <div>
     <h1>checkbox演示 vmodel</h1>
     <div>
-      <template v-for="(item, idx) in model.options">
+      <template v-for="(item, idx) in value">
         <input name="checkbox"
                type="checkbox"
                :key="idx"
-               :value="item.value"
-               v-model="item.checked" />{{item.label}}
+               :checked="item.checked"
+               :value="selectVal"
+               @change="handleChange"
+               @input="handleInput" />{{item.label}}
       </template>
-
     </div>
+
   </div>
 </template>
 
 <script>
 export default {
   name: 'checkbox',
+  // model: {
+  //   prop: 'checked',
+  //   event: 'change'
+  // },
   props: {
-    model: {
-      prop: 'checked',
-      event: 'change'
+    value: {
+      type: Array
+    },
+    selectItem: {
+      type: Array,
+      default () {
+        return []
+      }
     }
+    // checked: {
+    //   type: Boolean
+    // },
   },
   data () {
     return {
-      model: {
-        options: [
-          {
-            label: "第一",
-            value: 'first',
-            checked: true
-          },
-          {
-            label: "第二",
-            value: 'second',
-            checked: false
-          },
-          {
-            label: "第三",
-            value: 'three',
-            checked: false
-          }
-        ]
-      }
+      selectVal: []
+    }
+  },
+  methods: {
+    handleChange (e) {
+      this.$emit('change', this.selectItem)
+    },
+    handleInput (e) {
+      this.$emit('input', this.selectVal)
     }
   }
 }

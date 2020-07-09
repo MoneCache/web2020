@@ -27,7 +27,6 @@ export default {
   },
   methods: {
     handleUpdate (e) {
-      console.log(e)
       this.$emit('update:foo', e.target.value)
     }
   }

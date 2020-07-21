@@ -31,6 +31,11 @@ export default new Router({
             path: 'form',
             name: 'form',
             component: () => import('@/test/01-01/form/index')
+          },
+          {
+            path: 'vuex',
+            name: 'vuex',
+            component: () => import('@/test/01-03/index')
           }
         ]
       },

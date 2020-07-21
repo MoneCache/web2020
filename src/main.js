@@ -1,5 +1,7 @@
 import Vue from "vue";
 import App from "./App.vue";
+
+import store from './store/index'
 // 测试 创建的model
 // import create from './utils/create';
 import create from '@/test/01-01/notice/create';
@@ -12,5 +14,6 @@ Vue.prototype.$create = create;
 
 new Vue({
   router,
+  store,
   render: h => h(App),
 }).$mount("#app");

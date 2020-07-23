@@ -1,5 +1,5 @@
-import Vue from vue
-import Vuex from vuex
+import Vue from "vue"
+import Vuex from "vuex"
 
 
 // 1.这里是模块引入

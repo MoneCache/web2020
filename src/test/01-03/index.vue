@@ -5,7 +5,8 @@
 
     <div>
       <button @click="reduce">拆除一个</button>
-      <button @click="add">增加一个</button>
+      <button @click="add({count: 10})">增加一个</button>
+      <button @click="asyncModifyNum">异步增加</button>
     </div>
     <hr />
 
@@ -20,7 +21,9 @@
 <script>
 import {
   mapState,
-  mapGetters
+  mapGetters,
+  mapMutations,
+  mapActions
 } from "vuex"
 export default {
   name: 'testvuex',
@@ -36,11 +39,34 @@ export default {
   mounted () {
   },
   methods: {
-    reduce () {
-      return this.$store.getters.reduce
-    },
-    add () {
-      return this.$store.getters.add
+    // 1.2映射方式提交
+    ...mapMutations([
+      "reduce",
+      "add"
+    ]),
+    // reduce () {
+    //   this.$store.commit('reduce')
+    // },
+    // add () {
+    //   //1. 普通方式提交
+    //   // this.$store.commit('add', 10)
+
+    //   //1.1 对象方式提交
+    //   this.$store.commit({
+    //     type: "add",
+    //     count: 10
+    //   })
+    // }
+    // 2.1 映射方式提交
+    // ...mapActions(['asyncModifyNum'])
+    // 2. 提交actions
+    asyncModifyNum () {
+      // 2.2 普通方式提交
+      // this.$store.dispatch('asyncModifyNum')
+      // 2.3 对象方式提交
+      this.$store.dispatch({
+        type: 'asyncModifyNum'
+      })
     }
   }
 }

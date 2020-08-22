@@ -49,7 +49,13 @@ export default new Router({
         path: '/common',
         name: 'common',
         component: commonLayout,
-        children: []
+        children: [
+          {
+            path: 'interview',
+            name: 'interview',
+            component: () => import('@/pages/interview/index')
+          }
+        ]
       }
     ]
 })

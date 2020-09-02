@@ -12,7 +12,7 @@
 </template>
 
 <script>
-import menuHead from 'src/components/menu/index'
+import menuHead from '@/components/menu/index'
 export default {
   name: "commonlayout",
   components: {

@@ -26,7 +26,7 @@
 import myInput from "./myInput";
 import myFormItem from "./myItem";
 import myForm from "./myForm";
-import Notice from "@/test/01-01/notice/Notice";
+// import Notice from "@/test/01-01/notice/Notice";
 
 export default {
   data () {
@@ -41,8 +41,7 @@ export default {
   components: {
     myInput,
     myFormItem,
-    myForm,
-    Notice
+    myForm
   },
   methods: {
     onLogin () {

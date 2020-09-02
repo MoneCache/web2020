@@ -1,7 +1,5 @@
 import Vue from 'vue'
 import Router from 'vue-router'
-//测试自有 router
-// import Router from '@/test/01-02/selfRouter/index'
 import basicLayout from '@/layout/basiclayout'
 import commonLayout from '@/layout/commonlayout'
 

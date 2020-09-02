@@ -1,18 +1,12 @@
 <template>
   <div id="app">
-    <!-- <router-link to="/form">去表单</router-link>
-    <router-link to="/index">去首页</router-link> -->
     <router-view></router-view>
   </div>
 </template>
 
 <script>
 export default {
-  name: "app",
-  provide () {
-    return {
-    }
-  }
+  name: "app"
 };
 </script>
 

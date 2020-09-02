@@ -1,13 +1,23 @@
 <template>
   <div class="app">
-    <h1>这个是顶级 layout</h1>
-    <router-view></router-view>
+    <el-container>
+      <el-header>
+        <menu-head></menu-head>
+      </el-header>
+      <el-main>
+        <router-view></router-view>
+      </el-main>
+    </el-container>
   </div>
 </template>
 
 <script>
+import menuHead from 'src/components/menu/index'
 export default {
-  name: "commonlayout"
+  name: "commonlayout",
+  components: {
+    menuHead
+  }
 }
 </script>
 

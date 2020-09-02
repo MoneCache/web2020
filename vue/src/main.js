@@ -1,9 +1,9 @@
 import Vue from "vue";
+import ElementUI from 'element-ui';
+import 'element-ui/lib/theme-chalk/index.css';
 import App from "./App.vue";
-
+Vue.use(ElementUI);
 import store from './store/index'
-//测试自定义 router
-// import router from '@/test/01-02/selfRouter/index'
 import router from '@/router/router'
 
 Vue.config.productionTip = false;

@@ -53,7 +53,11 @@ export default new Router({
         name: 'common',
         component: commonLayout,
         children: [
-          
+          {
+            path: 'fullpage',
+            name: 'fullpage',
+            component: () => import('@/pages/fullpage/index')
+          }
         ]
       }
     ]

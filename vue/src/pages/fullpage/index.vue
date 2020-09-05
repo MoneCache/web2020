@@ -16,10 +16,7 @@ export default {
     }
   },
   mounted () {
-    // this.$nextTick(() => {
     this.height = document.body.clientHeight
-    // })
-    console.log(document.body.offsetHeight)
   }
 }
 </script>

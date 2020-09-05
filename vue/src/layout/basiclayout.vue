@@ -2,7 +2,8 @@
   <div class="app">
     <pageHeader></pageHeader>
     <el-container>
-      <h3 style="text-align: left">es6相关</h3>
+      <h3 class="text-left"
+          style="font-size: 30px">es6相关</h3>
       <el-header>
         <menu-head :menus="menuConfig.menus"></menu-head>
       </el-header>

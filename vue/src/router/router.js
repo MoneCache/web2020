@@ -26,6 +26,11 @@ export default new Router({
         component: basicLayout,
         children: [
           {
+            path: 'es6/proxy',
+            name: 'proxy',
+            component: () => import('@/pages/es6/proxy/index')
+          },
+          {
             path: 'form',
             name: 'form',
             component: () => import('@/test/01-01/form/index')
@@ -48,11 +53,7 @@ export default new Router({
         name: 'common',
         component: commonLayout,
         children: [
-          {
-            path: 'interview',
-            name: 'interview',
-            component: () => import('@/pages/interview/index')
-          }
+          
         ]
       }
     ]

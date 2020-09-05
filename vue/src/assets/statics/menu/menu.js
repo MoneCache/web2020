@@ -2,7 +2,7 @@ export default {
   menus: [
     {
       label: 'es6相关',
-      path: '/es6/index',
+      path: '/es6/proxy',
       id: "1"
     },
     {

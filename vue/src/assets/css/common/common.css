@@ -20,7 +20,15 @@
 .text-center {
   text-align: center
 }
-
+.text-bold {
+  font-weight: bold
+}
+.no-padding {
+  padding: 0;
+}
+.no-margin {
+  margin: 0;
+}
 /* padding */
 .ch-pl-sm {
   padding-left: 2px;
@@ -78,4 +86,15 @@
 
 .ch-mx-md {
   padding: 0 4px;
+}
+
+/* 字体相关 */
+.ch-font-12 {
+  font-size: 12px;
+}
+.ch-font-16 {
+  font-size: 16px;
+}
+.ch-font-20 {
+  font-size: 20px;
 }

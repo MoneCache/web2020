@@ -1,8 +1,10 @@
 <template>
   <div class="app">
+    <pageHeader></pageHeader>
     <el-container>
+      <h3 style="text-align: left">es6相关</h3>
       <el-header>
-        <menu-head></menu-head>
+        <menu-head :menus="menuConfig.menus"></menu-head>
       </el-header>
       <el-main>
         <router-view></router-view>
@@ -12,11 +14,19 @@
 </template>
 
 <script>
+import menuConfig from '@/assets/statics/menu/menu'
+import pageHeader from '@/components/menu/pageHeader'
 import menuHead from '@/components/menu/index'
 export default {
-  name: "commonlayout",
+  name: "basiclayout",
   components: {
+    pageHeader,
     menuHead
+  },
+  data () {
+    return {
+      menuConfig
+    }
   }
 }
 </script>

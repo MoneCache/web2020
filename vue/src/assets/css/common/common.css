@@ -1,0 +1,81 @@
+#app {
+  font-family: "Avenir", Helvetica, Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-align: center;
+  color: #2c3e50;
+}
+/* 宽度相关 */
+.full-width {
+  width: 100%
+}
+/* text 文本相关 */
+.text-left {
+  text-align: left
+}
+
+.text-right {
+  text-align: right
+}
+.text-center {
+  text-align: center
+}
+
+/* padding */
+.ch-pl-sm {
+  padding-left: 2px;
+}
+.ch-pr-sm {
+  padding-left: 2px;
+}
+.ch-pl-md {
+  padding-left: 4px;
+}
+.ch-pr-md {
+  padding-left: 4px;
+}
+.ch-pa-sm {
+  padding: 2px 4px;
+}
+.ch-pa-md {
+  padding: 4px 8px;
+}
+.ch-px-sm {
+  padding: 0 2px;
+}
+
+.ch-px-md {
+  padding: 0 4px;
+}
+/* margin */
+.ch-ml-sm {
+  padding-left: 2px;
+}
+
+.ch-mr-sm {
+  padding-left: 2px;
+}
+
+.ch-ml-md {
+  padding-left: 4px;
+}
+
+.ch-mr-md {
+  padding-left: 4px;
+}
+
+.ch-ma-sm {
+  padding: 2px 4px;
+}
+
+.ch-ma-md {
+  padding: 4px 8px;
+}
+
+.ch-mx-sm {
+  padding: 0 2px;
+}
+
+.ch-mx-md {
+  padding: 0 4px;
+}

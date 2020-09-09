@@ -95,6 +95,13 @@ body,html {
 .ch-mx-md {
   padding: 0 4px;
 }
+.ch-my-sm {
+  padding: 2px 0px;
+}
+
+.ch-my-md {
+  padding: 4px 0px;
+}
 
 /* 字体相关 */
 .ch-font-12 {

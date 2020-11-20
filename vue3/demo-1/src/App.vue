@@ -7,21 +7,27 @@
 </template>
 
 <script lang="ts">
-import { defineComponent, ref } from 'vue';
-
-export default defineComponent({
+import { reactive,toRefs  } from 'vue';
+// 增加类型注解
+interface propsData  {
+  girls: string [];
+  select: string;
+  handleSelect: (index: number) => void
+}
+export default ({
   name: 'App',
   setup() {
-    const girls = ref(['张三', '李四', '王五'])
-    const select = ref('')
-    const handleSelect = (index: number) => {
-      select.value = girls.value[index]
-    }
-
+    const data:propsData = reactive({
+      girls: ['张三', '李四', '王五'],
+      select: "",
+      handleSelect: (index: number) => {
+        data.select = data.girls[index]
+      }
+    })
+    const refData = toRefs(data)
+    
     return {
-      girls,
-      select,
-      handleSelect
+      ...refData
     }
   }
 });

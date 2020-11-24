@@ -1,35 +1,20 @@
 <template>
   <img alt="Vue logo" src="./assets/logo.png">
-  <div>
-    <button v-for="(item, idx) in girls" :key="idx" @click="handleSelect(idx)">{{item}}</button>
-  </div>
-  <div>你当前选择了{{select}}来保护你</div>
+  <test01></test01>
+  <test02></test02>
 </template>
 
 <script lang="ts">
-import { reactive,toRefs  } from 'vue';
-// 增加类型注解
-interface propsData  {
-  girls: string [];
-  select: string;
-  handleSelect: (index: number) => void
-}
-export default ({
+import { defineComponent  } from 'vue';
+import test01 from './components/test01.vue'
+import test02 from './components/test02.vue'
+
+export default defineComponent({
   name: 'App',
-  setup() {
-    const data:propsData = reactive({
-      girls: ['张三', '李四', '王五'],
-      select: "",
-      handleSelect: (index: number) => {
-        data.select = data.girls[index]
-      }
-    })
-    const refData = toRefs(data)
-    
-    return {
-      ...refData
-    }
-  }
+  components: {
+    test01,
+    test02
+  },
 });
 </script>
 

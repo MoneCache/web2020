@@ -1,19 +1,23 @@
 <template>
-  <!-- <img alt="Vue logo" src="./assets/logo.png"> -->
   <test01></test01>
   <test02></test02>
+  <test03></test03>
+  <test04></test04>
 </template>
 
 <script lang="ts">
-// import { defineComponent  } from 'vue';
 import test01 from './components/test01.vue'
 import test02 from './components/test02.vue'
+import test03 from './components/test03.vue'
+import test04 from './components/test04.vue'
 
 export default{
   name: 'App',
   components: {
     test01,
-    test02
+    test02,
+    test03,
+    test04
   },
 };
 </script>

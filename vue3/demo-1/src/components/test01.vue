@@ -6,13 +6,24 @@
 
   <div><button @click="overAction">点餐完毕</button></div>
  <div>{{ overText }}</div>
+ <div>{{ data.key }}</div>
 </template>
 
 <script lang="ts">
 import { defineComponent, ref, watch } from 'vue'
 export default defineComponent({
   name: 'test01',
-  setup() {
+  props: {
+    data: {
+      type: Object,
+      default() {
+        return {}
+      }
+    }
+  },
+  setup(props) {
+    console.log(props)
+    console.log('props', {...props})
     // 在模板中使用的变量, 必须用 ref 包装一下
     const girls = ref(['张三', '李四', '王五'])
     const select = ref('')

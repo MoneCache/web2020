@@ -1,5 +1,5 @@
 <template>
-  <test01></test01>
+  <test01 :data="{key: 'xiaoming'}"></test01>
   <test02></test02>
   <test03></test03>
   <test04></test04>

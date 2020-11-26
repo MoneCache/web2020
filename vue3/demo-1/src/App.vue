@@ -4,6 +4,9 @@
   <test03></test03>
   <test04></test04>
   <test05></test05>
+  <teleport to="#app">
+  <test06></test06>
+  </teleport>
 </template>
 
 <script lang="ts">
@@ -12,6 +15,7 @@ import test02 from './components/test02.vue'
 import test03 from './components/test03.vue'
 import test04 from './components/test04.vue'
 import test05 from './components/test05.vue'
+import test06 from './components/test06.vue'
 
 export default{
   name: 'App',
@@ -20,7 +24,8 @@ export default{
     test02,
     test03,
     test04,
-    test05
+    test05,
+    test06
   },
 };
 </script>

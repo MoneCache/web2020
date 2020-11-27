@@ -3,7 +3,7 @@
     <h1>以下是图片</h1>
     <h2>每3秒钟执行一次</h2>
     <div v-if="prloaded.value">
-      <img :src="prresult.value.message" alt="" />
+      <img :src="prresult.value.message" width="200" height="200"/>
     </div>
   </div>
 </template>

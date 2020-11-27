@@ -5,7 +5,7 @@
   <test04></test04>
   <test05></test05>
   <teleport to="#app">
-  <test06></test06>
+    <test06></test06>
   </teleport>
 </template>
 

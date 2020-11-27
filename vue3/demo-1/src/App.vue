@@ -5,7 +5,7 @@
   <test04></test04>
   <test05></test05>
   <!-- teleport 组件, 通常用于 dom 需要独立于 页面 dom的时候, (即全局弹框) -->
-  <teleport to="#app">
+  <teleport to="#other-app">
     <test06></test06>
   </teleport>
   <!-- suspense 组件, 用于异步请求组件, 并且该组件需要 返回一个 promise 对象 -->
@@ -17,6 +17,15 @@
       <div>Loading........</div>
     </template>
   </suspense>
+  <suspense>
+    <template #default>
+      <async></async>
+    </template>
+    <template #fallback>
+      接口请求中
+    </template>
+  </suspense>
+  
 </template>
 
 <script lang="ts">
@@ -27,8 +36,10 @@ import test04 from './components/test04.vue'
 import test05 from './components/test05.vue'
 import test06 from './components/test06.vue'
 import test07 from './components/test07.vue'
+import async from './components/async.vue'
+import { defineComponent,onErrorCaptured } from 'vue'
 
-export default{
+export default defineComponent({
   name: 'App',
   components: {
     test01,
@@ -37,9 +48,15 @@ export default{
     test04,
     test05,
     test06,
-    test07
+    test07,
+    async
   },
-};
+  setup() {
+    onErrorCaptured((error) => {
+      console.log(`error`, error)
+    })
+  }
+});
 </script>
 
 <style>

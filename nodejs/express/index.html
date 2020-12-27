@@ -23,6 +23,7 @@
       console.log(username, age)
       axios.post('http://localhost:3000/submit', {username, age}).then(res => {
         console.log(res.data.username)
+        console.log(res.data.age)
       })
     }
   </script>

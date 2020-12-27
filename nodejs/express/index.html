@@ -4,8 +4,27 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Document</title>
+  <script src="./node_modules/axios/dist/axios.js"></script>
 </head>
 <body>
-  
+  <form method="post">
+    <input id="username" type="text" name="username">
+    <input id="age" type="text" name="age">
+  </form>
+  <button class="submit">提交</button>
+  <script>
+    const dom = document.querySelector('.submit')
+    dom.addEventListener('click', () => {
+      submit()
+    })
+    function submit() {
+      const username = document.querySelector('#username').value
+      const age = document.querySelector('#age').value
+      console.log(username, age)
+      axios.post('http://localhost:3000/submit', {username, age}).then(res => {
+        console.log(res.data.username)
+      })
+    }
+  </script>
 </body>
 </html>

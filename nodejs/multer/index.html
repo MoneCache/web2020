@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <script src="./node_modules/axios/dist/axios.js"></script>
+</head>
+<body>
+  <form action="http://localhost:3000/upLoader" method="post" enctype="multipart/form-data"> 
+    <input id="username" type="text" name="username">
+    <input id="age" type="text" name="age">
+    <input type="file" name="images" id="images">
+    <input type="button">提交</input>
+  </form>
+  
+  <script>
+    // const dom = document.querySelector('.submit')
+    // dom.addEventListener('click', () => {
+    //   submit()
+    // })
+    function submit() {
+      const username = document.querySelector('#username').value
+      const age = document.querySelector('#age').value
+      const file = document.querySelector('#images').value
+
+      
+      const formData = new FormData()
+      formData.append('username', username)
+      formData.append('age', age)
+      formData.append('file', file)
+
+      axios.post('http://localhost:3000/upLoader', formData, {
+        headers: {
+          'Content-Type': 'multipart/form-data'
+        }
+      }).then(res => {
+        console.log(res.data.username)
+        console.log(res.data.age)
+
+      })
+    }
+  </script>
+</body>
+</html>

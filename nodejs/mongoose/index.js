@@ -2,7 +2,8 @@
 const mongoose = require('mongoose')
 // 无密码连接方式
 mongoose.connect("mongodb://127.0.0.1:27017/test", {
-  useNewUrlParser:true
+  useNewUrlParser:true,
+  useUnifiedTopology: true
 })
 
 // 有密码连接方式

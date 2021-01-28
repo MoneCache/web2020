@@ -15,7 +15,11 @@ mongoose.connect("mongodb://127.0.0.1:27017/test", {
 
 const userSchema = mongoose.Schema({
   name: String,
-  age: Number
+  age: Number,
+  status: {
+    type: Number,
+    default: 2 // 默认参数,当没有 status 时, 默认为 2
+  }
 })
 
 // 创建数据模型
@@ -58,7 +62,7 @@ const user = mongoose.model('User', userSchema, 'user')
 
 // 保存成功查找
 const u = new user({
-  name: '黄毛',
+  name: '鸡哥',
   age: 35
 })
 u.save((err, res) => {
